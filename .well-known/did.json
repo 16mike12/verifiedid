@@ -1,0 +1,48 @@
+{
+  "id": "did:web:verifiedid.schoene.cloud",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:verifiedid.schoene.cloud"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://verifiedid.schoene.cloud/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/c814f434-a344-4996-9f25-58f9367bedfa"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#99f4f27eca724dbb83de5adf82cf45a6vcSigningKey-b3b90",
+      "controller": "did:web:verifiedid.schoene.cloud",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "1xgTVNSKzx-Nz29sLtIkaF1rGtJGcEaQueoQBZFtV68",
+        "y": "VNN-gDrV7N-Jt_eG5Mlqu2yf3vQZaL4m8A0o-9Kf2lI"
+      }
+    }
+  ],
+  "authentication": [
+    "#99f4f27eca724dbb83de5adf82cf45a6vcSigningKey-b3b90"
+  ],
+  "assertionMethod": [
+    "#99f4f27eca724dbb83de5adf82cf45a6vcSigningKey-b3b90"
+  ]
+}
